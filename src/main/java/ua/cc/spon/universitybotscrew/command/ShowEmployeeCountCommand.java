@@ -14,7 +14,7 @@ public class ShowEmployeeCountCommand implements Command {
     @Override
     public void execute(String argument) {
 
-        int count = lectorService.findLectorsByDepartmentsName(argument).size();
+        int count = lectorService.findLectorsCountByDepartment(argument);
 
         ConsoleHelper.writeMessage(String.valueOf(count));
     }

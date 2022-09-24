@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface DepartmentService {
     Department getByName(String name);
-    List<Department> findAll();
+
+    List<String> findByPattern(String pattern);
 }

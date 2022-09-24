@@ -2,29 +2,17 @@ package ua.cc.spon.universitybotscrew;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
-import ua.cc.spon.universitybotscrew.command.Command;
-import ua.cc.spon.universitybotscrew.command.CommandContainer;
-import ua.cc.spon.universitybotscrew.util.ConsoleHelper;
+import org.springframework.context.ApplicationContext;
+import ua.cc.spon.universitybotscrew.service.MainService;
 
 @SpringBootApplication
 public class UniversityBotsCrewApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(UniversityBotsCrewApplication.class, args);
+        ApplicationContext context = SpringApplication.run(UniversityBotsCrewApplication.class, args);
 
-        CommandContainer commandContainer = context.getBean(CommandContainer.class);
+        MainService.start(context);
 
-        commandContainer.retrieveCommand("HELP").execute("");
-
-        String commandQuery;
-
-        while (!(commandQuery = ConsoleHelper.readString()).equalsIgnoreCase("EXIT")) {
-            Command command = commandContainer.retrieveCommand(commandQuery);
-            String argument = commandContainer.retrieveArgument(commandQuery);
-
-            command.execute(argument);
-        }
     }
 
 }

@@ -14,12 +14,22 @@ public class LectorServiceImpl implements LectorService {
     private final LectorRepository lectorRepository;
 
     @Override
+    public Double findAverageSalaryByDepartment(String departmentName) {
+        return lectorRepository.findAverageSalaryByDepartment(departmentName);
+    }
+
+    @Override
     public List<Lector> findLectorsByDepartmentsName(String departmentName) {
         return lectorRepository.findLectorsByDepartmentsName(departmentName);
     }
 
     @Override
-    public List<Lector> findAll() {
-        return lectorRepository.findAll();
+    public List<String> findByPattern(String pattern) {
+        return lectorRepository.findByPattern(pattern);
+    }
+
+    @Override
+    public int findLectorsCountByDepartment(String departmentName) {
+        return lectorRepository.findLectorsCountByDepartment(departmentName);
     }
 }

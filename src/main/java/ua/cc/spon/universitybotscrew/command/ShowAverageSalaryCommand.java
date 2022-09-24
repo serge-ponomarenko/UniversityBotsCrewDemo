@@ -16,11 +16,7 @@ public class ShowAverageSalaryCommand implements Command {
     @Override
     public void execute(String argument) {
 
-        double average = lectorService.findLectorsByDepartmentsName(argument)
-                .stream()
-                .mapToDouble(value -> value.getSalary().doubleValue())
-                .average()
-                .orElse(0);
+        double average = lectorService.findAverageSalaryByDepartment(argument);
 
         if (average > 0) {
             ConsoleHelper.writeMessage(String.format(ANSWER, argument, average));

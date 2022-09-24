@@ -19,7 +19,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public List<Department> findAll() {
-        return departmentRepository.findAll();
+    public List<String> findByPattern(String pattern) {
+        return departmentRepository.findByPattern(pattern);
     }
 }

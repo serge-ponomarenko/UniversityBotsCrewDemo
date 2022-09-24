@@ -2,12 +2,12 @@ package ua.cc.spon.universitybotscrew.command;
 
 public enum CommandName {
 
-    SEARCH_DEPARTMENT_HEAD(     CommandName.SEARCH_DEPARTMENT_HEAD_PATTERN,       CommandName.SEARCH_DEPARTMENT_HEAD_H),
-    SHOW_DEPARTMENT_STATISTICS( CommandName.SHOW_DEPARTMENT_STATISTICS_PATTERN,   CommandName.SHOW_DEPARTMENT_STATISTICS_HINT),
-    SHOW_AVERAGE_SALARY(        CommandName.SHOW_AVERAGE_SALARY_PATTERN,          CommandName.SHOW_AVERAGE_SALARY_HINT),
-    SHOW_EMPLOYEE_COUNT(        CommandName.SHOW_EMPLOYEE_COUNT_PATTERN,          CommandName.SHOW_EMPLOYEE_COUNT_HINT),
-    GLOBAL_SEARCH(              CommandName.GLOBAL_SEARCH_PATTERN,                CommandName.GLOBAL_SEARCH_HINT),
-    EXIT(                       CommandName.EXIT_PATTERN,                         CommandName.EXIT_HINT);
+    SEARCH_DEPARTMENT_HEAD(CommandName.SEARCH_DEPARTMENT_HEAD_PATTERN, CommandName.SEARCH_DEPARTMENT_HEAD_H),
+    SHOW_DEPARTMENT_STATISTICS(CommandName.SHOW_DEPARTMENT_STATISTICS_PATTERN, CommandName.SHOW_DEPARTMENT_STATISTICS_HINT),
+    SHOW_AVERAGE_SALARY(CommandName.SHOW_AVERAGE_SALARY_PATTERN, CommandName.SHOW_AVERAGE_SALARY_HINT),
+    SHOW_EMPLOYEE_COUNT(CommandName.SHOW_EMPLOYEE_COUNT_PATTERN, CommandName.SHOW_EMPLOYEE_COUNT_HINT),
+    GLOBAL_SEARCH(CommandName.GLOBAL_SEARCH_PATTERN, CommandName.GLOBAL_SEARCH_HINT),
+    EXIT(CommandName.EXIT_PATTERN, CommandName.EXIT_HINT);
 
     public static final String SEARCH_DEPARTMENT_HEAD_PATTERN = "Who is head of department (.*)";
     public static final String SEARCH_DEPARTMENT_HEAD_H = "Who is head of department {department_name}";

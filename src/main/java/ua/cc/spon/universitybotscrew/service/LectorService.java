@@ -6,5 +6,11 @@ import java.util.List;
 
 public interface LectorService {
     List<Lector> findLectorsByDepartmentsName(String departmentName);
-    List<Lector> findAll();
+
+    List<String> findByPattern(String pattern);
+
+    Double findAverageSalaryByDepartment(String departmentName);
+
+    int findLectorsCountByDepartment(String departmentName);
+
 }
